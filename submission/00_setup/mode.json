@@ -1,0 +1,19 @@
+{
+  "current_slice": "C0",
+  "support_prefill": false,
+  "support_slice": "",
+  "prefill_box_ids": [],
+  "members": [
+    "long",
+    "my",
+    "nam"
+  ],
+  "assignments": {
+    "long": "B3-dense",
+    "my": "B2-mid",
+    "nam": "B4-center"
+  },
+  "self": "nam",
+  "slice": "B4-center",
+  "degrade": []
+}
