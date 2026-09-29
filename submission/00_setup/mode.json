@@ -1,8 +1,18 @@
 {
-  "current_slice": "C0",
-  "support_prefill": false,
-  "support_slice": "",
-  "prefill_box_ids": [],
+  "current_slice": "B4-center",
+  "support_prefill": true,
+  "support_slice": "B4-center",
+  "prefill_box_ids": [
+    "adasind_270517.jpg:1",
+    "adasind_270517.jpg:2",
+    "adasind_270517.jpg:3",
+    "adasind_270517.jpg:4",
+    "adasind_271039.jpg:1",
+    "adasind_271039.jpg:2",
+    "adasind_271039.jpg:3",
+    "adasind_271039.jpg:4",
+    "adasind_271039.jpg:5"
+  ],
   "members": [
     "long",
     "my",
