@@ -30,3 +30,9 @@
    các cụm người đông theo từng người một, vì hai lỗi thật của annotator (R4, R10 ở `271039`) đều là bỏ sót người;
    (b) khi rework, đánh dấu vị trí cần sửa lên ảnh trước rồi mới vẽ, để tránh vẽ nhầm người và tạo box trùng như ở
    `rework` (L6); (c) chạy lại `selfqc` sau mỗi lần sửa để `selfqc.md` không còn cảnh báo cũ.
+
+## Đóng góp A/B/C cho ba câu trả lời
+
+- **A · Trương Công Hoài Nam:** cung cấp ca thực tế cho câu 3 (cách vẽ xe tải nhỏ `295948` L4 là `Truck`, người quấn khăn L3 là `Pedestrian`) và kinh nghiệm khi rework (vẽ nhầm người, tạo box trùng L6).
+- **B · Nghiêm Trà My:** cung cấp các bất đồng từ QA mù cho câu 3 (xe trắng `271039` Car #16, người dắt xe `295948` Pedestrian #26) và kết quả kiểm lại ca sửa.
+- **C · Bùi Thành Long:** tổng hợp và viết câu 1–2 theo `docs/10-svm360-reading-vi.md`, viết câu 3 từ decision log D07, D08, D10.

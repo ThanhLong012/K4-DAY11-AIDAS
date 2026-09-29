@@ -37,7 +37,15 @@ Bảng này xác định vai của nhóm. Vòng QA tự sinh trong team.json thu
 
 - Một ca đã phân xử: `adasind_271039.jpg` xe trắng góc trái (QA gọi Car #16, là L5), R04. B hỏi là van chở người (Car) hay e-rickshaw (ThreeWheeler); A gán Car, reference R7 cũng Car, ảnh cho thấy ô tô con. C quyết định giữ Car (ghi trong `note` của dòng `r2_qa` Car #16).
 - Ca còn mở: (1) `adasind_295948.jpg` L3/R3, lái hay dắt xe đạp (R03): A và B chọn Pedestrian, reference chọn Bike; người theo dõi qa; phép kiểm tiếp theo là xem frame liền kề (Ticket 3, D08). (2) R10 ở `271039` và box trùng L6 sau rework chưa sửa (D10).
-- Đóng góp của A/B/C vào kế hoạch và exit ticket: C viết `45_sampling_plan.csv`, `46_gold_set_plan.md`, `45_review_plan.md`, `50_exit_ticket.md` dựa trên lỗi A gặp (bỏ sót người trong cụm) và các ca B nêu (xe trắng, lái/dắt xe).
+- Đóng góp của A/B/C vào kế hoạch và exit ticket: C viết `45_sampling_plan.csv`, `46_gold_set_plan.md`, `45_review_plan.md`, `50_exit_ticket.md` dựa trên lỗi A gặp (bỏ sót người trong cụm) và các ca B nêu (xe trắng, lái/dắt xe); phần đóng góp từng người ghi cuối `50_exit_ticket.md`.
+- Người soạn / người kiểm từng kế hoạch:
+
+  | File | Người soạn | Người kiểm |
+  |---|---|---|
+  | `45_sampling_plan.csv` | C · Bùi Thành Long | B · Nghiêm Trà My |
+  | `46_gold_set_plan.md` | C · Bùi Thành Long | B · Nghiêm Trà My |
+  | `45_review_plan.md` | C · Bùi Thành Long | B · Nghiêm Trà My |
+  | `50_exit_ticket.md` | C · Bùi Thành Long (tổng hợp ý A, B) | B · Nghiêm Trà My |
 - Thay đổi phân công nếu có: không đổi vai. C viết `parking/observations.md` thay A ở P0 để kịp giờ, sau đó B chỉnh lại.
 
 ## 5. Xác nhận trước khi nộp

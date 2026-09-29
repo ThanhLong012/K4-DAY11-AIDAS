@@ -86,8 +86,8 @@
     },
     {
       "file": "r2_qa/qa_review.md",
-      "lines": 16,
-      "sha256": "3cbcb965346014e18324e19e2996c763a866a2c5f94bf0909577d291e3d6188e"
+      "lines": 25,
+      "sha256": "41b37e5fb7faae3b587c5377f0c79d5ca2f2cc3ef87360be46a0fee66b4e5e89"
     },
     {
       "file": "r2_qa/qa_overlay.html",
@@ -96,8 +96,8 @@
     },
     {
       "file": "r3_diag/local_quality.md",
-      "lines": 49,
-      "sha256": "fb6c4d96a8a0b218da37e111e781386ceca549f75176fa639e8fc31f7779889c"
+      "lines": 58,
+      "sha256": "7abdea0187c1646320916c533e7d7c53dfbadd20993b0ccf6bf6889fb445feeb"
     },
     {
       "file": "r3_diag/local_quality.json",
@@ -148,7 +148,7 @@
     {
       "file": "findings.csv",
       "lines": 49,
-      "sha256": "0f43501d0725f772b634a3caaf224c306cda48d90524a333f6abafcced641e9e"
+      "sha256": "001e5f0c07522086f6b6daf85dbb49c3367c1cb0b16027c608308d6b8f75e961"
     },
     {
       "file": "10_error_card.md",
@@ -187,8 +187,8 @@
     },
     {
       "file": "50_exit_ticket.md",
-      "lines": 32,
-      "sha256": "96a2347652bf837f733d085cd53c96ebb5c86b8584e0ef06f6bdd54edf3c74e0"
+      "lines": 38,
+      "sha256": "338a420f2147aa3a3cee3e21b9fc168d96e248b29cb6424cc9d6d3829fd04b72"
     }
   ],
   "failed_gates": []

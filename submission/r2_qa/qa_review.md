@@ -14,3 +14,12 @@ Mã khóa: 9454-EBC8
 Ghi finding r2_qa: cell=L_only, rule_id có giá trị, why để trống.
 
 
+
+## Kiểm lại ca sửa (P5)
+
+B kiểm lại bản rework khoá mã `4B5A-FC5E` (`rework/annotations-v2.xml`, `rework/delta.md`) trên ảnh `adasind_271039.jpg`:
+
+| frame | object_ref | rule_id | kết quả kiểm lại |
+|---|---|---|---|
+| adasind_271039.jpg | Người đứng cạnh biển đỏ bên phải ảnh (R4) | R01 | Đã có box Pedestrian ở mép phải: đạt |
+| adasind_271039.jpg | Nhóm người sát nhau gần car đỏ (R10) | R01 | Người áo vàng bị che vẫn chưa có box; box mới thêm trùng người đã có (L6): chưa đạt |
