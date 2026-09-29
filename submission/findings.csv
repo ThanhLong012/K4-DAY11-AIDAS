@@ -1,5 +1,5 @@
 round,slice,frame,object_ref,cell,what,why,severity,owner,rule_id,evidence,action,rules_version,note
-calib,C0,adasind_019560.jpg,L4+R3,na,WRONG_CLASS,,,,,,,,
-calib,C0,adasind_019560.jpg,L6,na,SPURIOUS,,,,,,,,
-calib,C0,adasind_019560.jpg,L7,na,SPURIOUS,,,,,,,,
-calib,C0,adasind_019560.jpg,L9,na,SPURIOUS,,,,,,,,
+calib,C0,adasind_019560.jpg,L4+R3,na,WRONG_CLASS,,,,R04,"compare.html p1_calib: L4 Car (41,772,97,855) trùng R3 ThreeWheeler (39,773,99,850); ảnh gốc là xe auto-rickshaw vàng ở mép trái",,v1.0.0,"Tuk-tuk bị gán Car; theo R04 xe ba bánh chở người là ThreeWheeler. Số trong compare là tổng hợp, đã soi lại trên ảnh"
+calib,C0,adasind_019560.jpg,L6,na,SPURIOUS,,,,R03,"compare.html p1_calib: L6 Pedestrian (459,732,533,835) nằm trên xe máy L1 Bike (417,779,528,919); R2 Bike (427,736,535,910) bao cả người lẫn xe",,v1.0.0,Người áo đỏ đội mũ bảo hiểm đang ngồi trên xe máy bị tách thành Pedestrian; R03: rider + xe hai bánh = một Bike. L1 cũng chỉ bao phần xe nên khớp R2 lỏng hơn
+calib,C0,adasind_019560.jpg,L7,na,SPURIOUS,,,,R03,"compare.html p1_calib: L7 Bike (595,780,647,839) nằm trong L5 Bike (594,735,730,915); reference chỉ có một R1 Bike",,v1.0.0,Người áo vàng với xe đạp bị vẽ thêm một box Bike thứ hai bên trong box Bike chính; theo R03 chỉ một Bike
+calib,C0,adasind_019560.jpg,L9,na,SPURIOUS,,,,R07,"compare.html p1_calib: L9 Bike (0,1065,153,1568) trùng polygon ego_body của chính annotator (x 0–147, y 1073–1570); reference không có box ở đây",,v1.0.0,"Box Bike vẽ lên thân xe ego ở mép trái; theo R07 vùng này chỉ vẽ polygon ego_body, R09 không để box nằm trong ignore_region"

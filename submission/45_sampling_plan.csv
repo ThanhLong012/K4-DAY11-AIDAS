@@ -1,9 +1,9 @@
 camera_id,slice_type,frames,risk,rationale
-front,normal,,TODO,TODO
-front,hard,,TODO,TODO
-rear,normal,,TODO,TODO
-rear,hard,,TODO,TODO
-left,normal,,TODO,TODO
-left,hard,,TODO,TODO
-right,normal,,TODO,TODO
-right,hard,,TODO,TODO
+front,normal,20,medium,"Cảnh thường phía trước: xe/người rõ, ít che. Giữ đủ mẫu để đo baseline và phát hiện lỗi hệ thống (sai class, box lỏng) chứ không chỉ ca khó."
+front,hard,35,high,"Nhiều đối tượng động nhất (xe máy, rider, người đi bộ cắt ngang), lóa nắng trước mặt, cảnh đông và vật nhỏ ở xa. Lỗi ở đây ảnh hưởng trực tiếp cảnh báo va chạm nên ưu tiên cao."
+rear,normal,15,medium,"Cảnh lùi/đỗ thường: ít đối tượng hơn front nên cần ít mẫu normal hơn, nhưng vẫn giữ để kiểm thân xe ego và lens_border ổn định."
+rear,hard,30,high,"Lùi xe gần người/vật thấp (trẻ em, xe đạp, cọc), ánh đèn xe sau ban đêm, vật sát thân xe bị méo và bị cắt ở rìa vòng kính."
+left,normal,15,medium,"Cảnh bên trái thường: lề đường, xe đỗ, người đi bộ trên vỉa hè. Đủ mẫu để kiểm ego_body (gương/thân xe) ở từng frame."
+left,hard,35,high,Vật ở rìa vòng kính méo mạnh và dễ truncated; vùng seam với front/rear ở hai góc xe; xe máy vượt sát và vỉa hè đông người. Nhiều hard vì zone edge dễ sai nhất.
+right,normal,15,medium,"Cảnh bên phải thường: làn bên cạnh, xe đi cùng chiều. Giữ mẫu normal tương đương left để so sánh hai bên."
+right,hard,35,high,"Xe đối diện/vượt qua ở làn bên, vật ở seam hai góc xe, méo mạnh ở rìa và bị che bởi gương. Cùng mức rủi ro edge/seam như left nên phân bổ ngang nhau."
