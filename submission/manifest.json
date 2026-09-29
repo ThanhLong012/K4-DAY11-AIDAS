@@ -1,0 +1,123 @@
+{
+  "files": [
+    {
+      "file": "00_setup/doctor.txt",
+      "lines": 4,
+      "sha256": "d3aae0e04b2c797fc2101ae9cbed4241b1c19f8f7a69b66ab9385fd7a4c94f97"
+    },
+    {
+      "file": "00_setup/mode.json",
+      "lines": 32,
+      "sha256": "826211616218ddbc57fb38f9e2e57cf84ce740de79b74f079ff0b1d16fe1ddd4"
+    },
+    {
+      "file": "00_setup/sensor_context.md",
+      "lines": 23,
+      "sha256": "6b61fe820ad4c40697dab542f76cf39e3de5d4f73f8c57bfe56ea7dcd1dbb086"
+    },
+    {
+      "file": "parking/annotations.xml",
+      "lines": 101,
+      "sha256": "310347795e599f658f6f81868a1442a7324639c602e1ba4e6e80f14c42f89546"
+    },
+    {
+      "file": "parking/observations.md",
+      "lines": 16,
+      "sha256": "6c6331e3bd6cd39043f7fd528a1d243099973e70c39dcf9e5fee71f25d376a68"
+    },
+    {
+      "file": "p1_calib/annotations.xml",
+      "lines": 295,
+      "sha256": "d0e68b5402bee2bd2d848d0b94a1b314e6b10d59451ee8327fe5287713ebfbcd"
+    },
+    {
+      "file": "p1_calib/lock.txt",
+      "lines": 9,
+      "sha256": "e642875adb459fca8032cd3d4da97db770f16ed3c0ef7e86b0b83114ba8d7c3b",
+      "locked_at": "2026-09-29T16:23:55+07:00"
+    },
+    {
+      "file": "p1_calib/reference.txt",
+      "lines": 3,
+      "sha256": "70288758071e94108ab34360f5b6fa7f0d9f4af051da7523f97caaaf60b68ab9",
+      "lock_before_reveal": true
+    },
+    {
+      "file": "p1_calib/compare.md",
+      "lines": 17,
+      "sha256": "f5cc5bbd7537ce6d1ef41c68d1c7da85c2ecd757d791dabd8b8bcd1b2e477d11"
+    },
+    {
+      "file": "p1_calib/compare.html",
+      "lines": 34,
+      "sha256": "2a9e54b3b0eaaf02c4dbfd4d69a2ab3c139c14831ed20ac3cf759b215a311b94"
+    },
+    {
+      "file": "r1_craft/annotations.xml",
+      "lines": 399,
+      "sha256": "9454ebc817665f1d785aa6c5f6b70842187b66990aa6a9e0243aba40a190272d"
+    },
+    {
+      "file": "r1_craft/lock.txt",
+      "lines": 9,
+      "sha256": "4a0566cf09b2a83012889ca571a38a54b1f72798b9c6d93da2762706f7219c42",
+      "locked_at": "2026-09-29T19:19:06+07:00"
+    },
+    {
+      "file": "r1_craft/selfqc.md",
+      "lines": 17,
+      "sha256": "62a5fdd6efafbae63d3ebef7d366d0d8c6a6b475059063d039af6d48d7a1468a"
+    },
+    {
+      "file": "findings.csv",
+      "lines": 5,
+      "sha256": "94494f3639b01dc672e04fff2043a864737e6684d453411cdfd46ad9585880bd"
+    },
+    {
+      "file": "40_decision_log.csv",
+      "lines": 1,
+      "sha256": "b08969b09d2c53145049c164142f6d8790d023a7e35a3c3e47eb6836408869f5"
+    },
+    {
+      "file": "45_sampling_plan.csv",
+      "lines": 9,
+      "sha256": "ab25c6ed4b6aab70f27120afa892c6cb86b332c4a506c0a01db67601226b4d89"
+    },
+    {
+      "file": "46_gold_set_plan.md",
+      "lines": 20,
+      "sha256": "22f9539c57b3865442e51607b82218657a1384c65c3b8dff8864fb0380056ca3"
+    }
+  ],
+  "failed_gates": [
+    "findings cần ≥12 dòng (hiện 4)",
+    "findings cần ≥4 cell khác na",
+    "findings cần ≥8 dòng có M trong cell",
+    "findings cần ≥3 dòng vai r1_craft",
+    "findings cần ≥3 dòng vai r2_qa",
+    "findings cần ≥3 dòng vai r3_diag",
+    "findings cần ≥3 zone (hiện 2)",
+    "decision log cần ≥4 entry và ≥1 escalated",
+    "Thiếu file r1_craft/reference.txt",
+    "Thiếu file r1_craft/compare.md",
+    "Thiếu file r1_craft/compare.html",
+    "Thiếu file r2_qa/qa_review.md",
+    "Thiếu file r2_qa/qa_overlay.html",
+    "Thiếu file r3_diag/local_quality.md",
+    "Thiếu file r3_diag/local_quality.json",
+    "Thiếu file r3_diag/local_quality_conflicts.csv",
+    "Thiếu file r3_diag/local_quality_confusion.csv",
+    "Thiếu file r3_diag/model_compare.md",
+    "Thiếu file r3_diag/model_compare.html",
+    "Thiếu file r3_diag/zone_table.md (chạy python3 lab11.py model)",
+    "Thiếu file rework/annotations-v2.xml",
+    "Thiếu file rework/lock2.txt",
+    "Thiếu file rework/delta.md",
+    "Thiếu file 10_error_card.md (chạy python3 lab11.py card)",
+    "Thiếu file 20_guideline_patch.md (mẫu tự tạo sau python3 lab11.py reference r1_craft)",
+    "Thiếu file 30_escalation_ticket.md (mẫu tự tạo sau python3 lab11.py reference r1_craft)",
+    "Thiếu file 45_review_plan.md (mẫu tự tạo sau python3 lab11.py reference r1_craft)",
+    "Thiếu file 50_exit_ticket.md (mẫu tự tạo sau python3 lab11.py reference r1_craft)",
+    "screenshots cần ≥2 ảnh"
+  ]
+}

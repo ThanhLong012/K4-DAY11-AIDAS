@@ -25,5 +25,8 @@
   },
   "self": "nam",
   "slice": "B4-center",
-  "degrade": []
+  "degrade": [
+    "stretch",
+    "k12"
+  ]
 }
