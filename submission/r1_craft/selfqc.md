@@ -1,6 +1,5 @@
 # Tự soát
 
-- adasind_295948.jpg L8: truncated khác dự kiến
 - Tên task thiếu raw_fisheye
 
 ## Checklist thủ công
