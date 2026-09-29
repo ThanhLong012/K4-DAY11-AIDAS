@@ -10,7 +10,7 @@
 - Tên định danh vai A dùng cho --self: nam
 - Kênh trao đổi nội bộ: Discord
 - Đại diện nộp (vai C): Bùi Thành Long, 02147
-- Commit chốt bài: https://github.com/ThanhLong012/K4-DAY11-AIDAS/commit/9d0bd3fbd48e2db057b56450d6c1e459a7edd71f
+- Commit chốt bài: https://github.com/ThanhLong012/K4-DAY11-AIDAS/commit/14162c8a9cd755e9caf5e4a8f435a5315ec26791
 
 ## 2. Ba vai chính
 
@@ -31,7 +31,7 @@ Bảng này xác định vai của nhóm. Vòng QA tự sinh trong team.json thu
 | P3 · Chốt QA mù | B → C, A | `r2_qa/qa_review.md`, `qa_overlay.html`, 6 dòng `r2_qa`; commit 7d1188a → b6d3806 | C: QA chạy với mã 9454-EBC8 trước khi mở reference; 6 nhận xét có frame và rule_id; C điền `slice` và tên frame đầy đủ để `triage` hợp lệ | Xong. Nhận xét dùng số ID CVAT (#16, #24…) thay mã L và chưa có nhận xét cho `270517`; C đối chiếu sang mã L trong cột `note` |
 | P4 · Quyết định sửa | C → A, B | findings `r3_diag`, `zone_table.md`, `30_escalation_ticket.md`, decision log D06–D09; chọn rework R4, R10 ở `271039` | A: nhận 2 ca rework và ảnh đánh dấu vị trí | Xong. 3 ca escalate (ego_body reference, xe tải nhỏ, lái/dắt xe) |
 | P5 · Kiểm bản sửa | A → B → C | `B4-center-update.zip` (f6f41b5) → `rework/annotations-v2.xml`, `lock2.txt` mã 4B5A-FC5E, `delta.md` | C: so bản sửa với bản khoá: thêm R4 đúng, chưa có R10, thêm 1 box trùng (L6); edge missing 1→0, center spurious 4→5 | Khoá với kết quả 1/2 ca (D10). B đã kiểm lại `delta.md` và ảnh, xác nhận qua Discord |
-| P6 · Chốt nộp | A, B → C | `manifest.json`, commit chốt 9d0bd3f | C: `python3 lab11.py check` báo "Hồ sơ hình thức đầy đủ" | Chờ A, B xác nhận mục 5 rồi push |
+| P6 · Chốt nộp | A, B → C | `manifest.json`, commit chốt 14162c8 | C: `python3 lab11.py check` báo "Hồ sơ hình thức đầy đủ" | Chờ A, B xác nhận mục 5 rồi push |
 
 ## 4. Bất đồng và phối hợp
 
