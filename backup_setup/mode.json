@@ -1,0 +1,19 @@
+{
+  "members": [
+    "long",
+    "my",
+    "nam"
+  ],
+  "assignments": {
+    "long": "B3-dense",
+    "my": "B2-mid",
+    "nam": "B4-center"
+  },
+  "self": "my",
+  "slice": "B2-mid",
+  "degrade": [],
+  "current_slice": "C0",
+  "support_prefill": false,
+  "support_slice": "",
+  "prefill_box_ids": []
+}
