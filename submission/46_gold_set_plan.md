@@ -17,4 +17,16 @@ không làm thay phần lý do.
 - Một ca seam/cross-camera cần policy và evidence trước khi ghép hai box: một xe máy ở góc trước-trái xuất hiện cùng lúc trên front (zone edge) và left (zone mid) với hai box khác nhau. Chưa được coi là `DUPLICATE` hay xoá một box khi chưa có timestamp đồng bộ, calibration hai camera và policy output đích (giữ cả hai hay hợp nhất trên BEV).
 - Vì sao peer agreement hoặc quality report trên ảnh một camera chưa chứng minh gold set đúng cho cả bốn camera: lab chỉ có một camera fisheye ADASIND cầm tay, không có seam, không có calibration và không có track qua camera. Hai người đồng ý với nhau chỉ cho thấy họ áp rule giống nhau, không chứng minh nhãn đúng; teaching reference cũng đã sửa tay và có thể sai. Các ca riêng của từng camera và ca seam chưa hề được thử.
 
-_Bản nháp P0: sau P4 bổ sung lý do dựa trên lỗi thực tế thấy trên slice `B4-center`._
+## Bổ sung sau P4 (từ lỗi thật trên slice `B4-center`)
+
+- **Ca normal cũng cần review riêng:** ở mỗi camera lấy một phần mẫu normal để bắt lỗi hệ thống không nằm ở ca khó.
+  Trên ADASIND, lỗi nhiều nhất của model (gọi xe ba bánh là Car, 5 xe) xuất hiện cả ở cảnh thường, không chỉ cảnh khó.
+- **Cách chọn mẫu:** chọn theo cảnh, không lấy nhiều frame liền nhau trong cùng cảnh; mẫu hard chọn theo rủi ro nên
+  chỉ dùng để tìm lỗi, cần thêm mẫu ngẫu nhiên nếu muốn đo tỷ lệ lỗi (xem `45_review_plan.md`).
+- **Người rà độc lập và giải quyết bất đồng:** annotator khoá trước khi xem reference; QA soát mù; người chẩn đoán
+  phân xử theo rule_id. Ca chưa đủ bằng chứng ghi `E5_unresolved` và escalate, không tự chọn. Ví dụ `295948` L3/R3
+  (lái hay dắt xe): annotator và QA khác reference, đã escalate (Ticket 3).
+- **Reference hiện tại không phải gold:** trên 3 frame đã thấy 2 lỗi của teaching reference (`ego_body` hình chữ nhật
+  trùm người đi đường và xe tải nhỏ gán Car ở `295948`). Mọi reference phải qua review độc lập trước khi gọi là gold.
+- **Điều kiện refresh bổ sung:** khi `rules_version` đổi (đề xuất v1.1.0 trong `20_guideline_patch.md` với R03a, R11),
+  các frame có người dắt/lái xe và vật bị che nhiều phải gán lại theo luật mới.
