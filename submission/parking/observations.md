@@ -1,19 +1,16 @@
 # Quan sát vạch ô đỗ
 
-- Hai vạch `parking_line` đã vẽ (mô tả vị trí trong ảnh): (1) vạch chia ô ở hàng giữa, bên trái, chạy chéo từ
-  khoảng (170, 520) xuống (247, 563); (2) vạch chia ô ở tiền cảnh bên phải, từ khoảng (698, 622) tới mép phải ảnh
-  (960, 685). Cả hai là đoạn sơn trắng ngăn hai ô đỗ cạnh nhau, polyline dừng ở chỗ vạch hết sơn hoặc ra khỏi khung.
-  Tổng cộng export có 22 `parking_line`, gồm các vạch chia ô ở hàng xa, hàng giữa và tiền cảnh.
-- Một vạch/dấu sơn hoặc biên **không** vẽ, và vì sao: dấu sơn trắng sát mép dưới giữa ảnh (khoảng x≈340–390,
-  y≈712–720) chỉ thấy một phần nhỏ, không xác định được là vạch chia ô hay ký hiệu mặt đường, nên không gọi là
-  `parking_line`. Các vạch ở hàng xa nhất gần xe đỏ (y < 485) quá nhỏ và mờ, không phân biệt được từng ô nên cũng
-  không vẽ.
-- Polygon `free_space` dừng ở đâu; có phần bị che nào không: polygon chính phủ lối xe chạy giữa hàng ô giữa và hàng ô
-  tiền cảnh, cạnh trên dừng ở đầu các vạch hàng giữa (y≈520–580), cạnh dưới dừng ở đầu các vạch tiền cảnh
-  (y≈590–680), trải hết chiều ngang ảnh. Hai polygon mảnh phía xa (y≈485–522) là lối xe chạy giữa các hàng ô xa.
-  Bãi gần như trống nên không có xe hay vật che trong các polygon; xe đỏ ở xa nằm ngoài polygon.
-- Ca chưa chắc cần hỏi người soát (nếu không có, ghi “không có”): (1) hai polyline dài nằm ngang chạy dọc giữa hàng ô
-  giữa (từ (1, 542) tới (659, 518) và từ (553, 508) tới (834, 531)): có thể là vạch giữa hai dãy ô quay đầu vào nhau
-  (chia ô), nhưng cũng có thể là dải sơn dẫn lối xe, khi đó không phải `parking_line`. (2) Các vạch ở hàng xa bị mờ
-  và rất ngắn (vài pixel) nên khó chắc là vạch chia ô; hai polygon `free_space` phía xa cũng mảnh và ranh giới kém
-  chắc chắn hơn polygon chính.
+- Hai vạch `parking_line` đã vẽ (mô tả vị trí trong ảnh):
+  Vạch 1 là gạch sơn trắng gần thẳng đứng ở phía trái ảnh, cách mép trái khoảng 1/8 chiều ngang. Gạch này là ranh giới giữa hai ô đỗ liền kề, thấy rõ nên vẽ polyline dọc theo tâm vạch và dừng đúng chỗ sơn kết thúc.
+  Vạch 2 là gạch sơn trắng ngắn nghiêng ở giữa-trái ảnh, cách mép trái khoảng 1/5 chiều ngang. Gạch này là cạnh bên của một ô đỗ, bị nghiêng do phối cảnh, được vẽ bằng một polyline ngắn, chỉ phần sơn nhìn thấy.
+
+- Một vạch/dấu sơn hoặc biên **không** vẽ, và vì sao:
+ Các vạch rất nhỏ sát đường chân trời (xa camera, vùng mặt đường bị cháy sáng) cũng không vẽ hết vì quá mờ và chỉ dài vài pixel, không xác định được hướng và vị trí.
+
+- Polygon `free_space` dừng ở đâu; có phần bị che nào không:
+  Polygon `free_space` phủ dải mặt nhựa trống ở tiền cảnh, từ mép trái đến mép phải ảnh. Cạnh trên dừng ở hàng vạch ô đỗ phía xa, cạnh dưới dừng ở hàng vạch trắng dày gần camera. Xe, cây, hàng rào và cột đèn đều nằm ngoài polygon. Không có vật nào che mặt đường trong vùng này. Phía xa mặt đường bị cháy sáng nên ranh giới ở đó chỉ là ước lượng.
+
+- Ca chưa chắc cần hỏi người soát (nếu không có, ghi “không có”):
+  - Ca chưa chắc cần hỏi người soát (nếu không có, ghi "không có"):
+  Phần phía xa, gần đường chân trời: mặt đường bị cháy sáng và các vạch quá nhỏ, mờ nên không rõ ở đó có vạch ô đỗ thật hay không.
+  Vùng giữa `free_space` và `parking_line` ở phía xa: chỉ thấy vạch trắng ngang/chéo, không có vạch dọc để chia thành từng ô, nên không rõ đây có phải chỗ đỗ xe hay chỉ là làn đường di chuyển. Cần người soát xác nhận vùng này có nên tính là `free_space` (chỗ đỗ trống) hay không.
