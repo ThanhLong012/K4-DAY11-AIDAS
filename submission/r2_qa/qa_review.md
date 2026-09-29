@@ -11,8 +11,6 @@ Mã khóa: 9454-EBC8
 | 295948 | Bike #24 | R03 | Bị che nhiều, không đủ rõ để xác định chắc chắn là bike, cần kiểm tra lại |
 | 295948 | Pedestrian #32 | R03 | Bị che nhiều, không đủ rõ để xác định là người dắt xe (một box Pedestrian và một box Bike tách riêng) hay người đang ngồi lái xe (một box Bike) |
 | 295948 | Pedestrian #26 | R03 | Người lớn ở tiền cảnh đang dắt xe hai bánh; thấy phần xe/bánh ở phía dưới. Theo R03 nên là một box Pedestrian và một box Bike tách riêng. |
-| TODO | TODO | TODO | TODO |
-| TODO | TODO | TODO | TODO |
 
 Ghi finding r2_qa: cell=L_only, rule_id có giá trị, why để trống.
 
